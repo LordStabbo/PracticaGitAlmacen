@@ -4,9 +4,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AppAlmacenGit {
+	//Este comentario es para hacer un Commit y un pull
 	public static void main (String[] args) {
 		int opcion;//esta variable servira para elegir las opciones del switch
-		int uds;//con esta variable podré operar con las unidades en el stock
+		int uds;//con esta variable podrÃ© operar con las unidades en el stock
 		AlmacenGit almacen01 = new AlmacenGit(101, 100);
 		int salir = 0;//esta variable se utilizara para salir del do...while del try...catch
 		int salirProg = 0;/*esta variable la utilizara el do...while con el que es posible
@@ -19,13 +20,13 @@ public class AppAlmacenGit {
 				 * incorrecto
 				 */
 				try {
-					//estas son las diferentes opciones con las que podrá operar el programa
+					//estas son las diferentes opciones con las que podrÃ¡ operar el programa
 					System.out.println("Elige una de las siguientes opciones:");
 					System.out.println("1) Checkear stock de camisas");
-					System.out.println("2) Añadir camisas al stock");
+					System.out.println("2) AÃ±adir camisas al stock");
 					System.out.println("3) Restar al stock camisas que se han vendido");
 					System.out.println("4) Checkear stock de pantalones");
-					System.out.println("5) Añadir pantalones al stock");
+					System.out.println("5) AÃ±adir pantalones al stock");
 					System.out.println("6) Restar al stock pantalones que se han vendido");
 					System.out.println("7) Salir.)");
 
@@ -36,10 +37,10 @@ public class AppAlmacenGit {
 
 					case 1:
 						/*esta opcion imprimira mediante un getter la cantidad de camisas que hay en el stock, y 
-						 * mediante una serie de if´s y else if´s avisara al usuarop de la urgencia con la que hay
+						 * mediante una serie de ifÂ´s y else ifÂ´s avisara al usuarop de la urgencia con la que hay
 						 * que reponer el stock en funcion de la cantidad que haya en este
 						 */
-						System.out.println("El almacén tiene " + almacen01.dameCamisas() + " camisas");
+						System.out.println("El almacÃ©n tiene " + almacen01.dameCamisas() + " camisas");
 						if (almacen01.dameCamisas() < 5) {
 							System.out.println("Hay que hacer otro pedido");
 						} else if (almacen01.dameCamisas() > 5 && almacen01.dameCamisas() < 10) {
@@ -51,16 +52,16 @@ public class AppAlmacenGit {
 						break;
 
 					case 2: //este case trabaja con el metodo setter con el que se suman camisas
-						System.out.println("¿Cuantas camisas desea añadir?");
+						System.out.println("Â¿Cuantas camisas desea aÃ±adir?");
 						uds = sc.nextInt();
 						almacen01.sumaCamisas(uds);
-						System.out.println("Has añadido " + uds + " camisas");
+						System.out.println("Has aÃ±adido " + uds + " camisas");
 						System.out.println("Ahora el almacen tiene" + almacen01.dameCamisas() + " camisas");
 						salir = 1;
 						break;
 
 					case 3://este case trabaja con el metodo setter con el que se restan camisas
-						System.out.println("¿Cuantas camisas de las que ha vendido desea restar al stock?");
+						System.out.println("Â¿Cuantas camisas de las que ha vendido desea restar al stock?");
 						uds = sc.nextInt();
 						almacen01.restaCamisas(uds);
 						System.out.println("Has vendido " + uds + " camisas");
@@ -70,7 +71,7 @@ public class AppAlmacenGit {
 
 					case 4:
 						/*esta opcion imprimira mediante un getter la cantidad de pantalones que hay en el stock, y 
-						 * mediante una serie de if´s y else if´s avisara al usuarop de la urgencia con la que hay
+						 * mediante una serie de ifÂ´s y else ifÂ´s avisara al usuarop de la urgencia con la que hay
 						 * que reponer el stock en funcion de la cantidad que haya en este
 						 */
 						System.out.println("El almacen tiene " + almacen01.damePantalones() + " pantalones");
@@ -84,16 +85,16 @@ public class AppAlmacenGit {
 						break;
 
 					case 5://este case trabaja con el metodo setter con el que se suman pantalones
-						System.out.println("¿Cuantos pantalones desea añadir al stock");
+						System.out.println("Â¿Cuantos pantalones desea aÃ±adir al stock");
 						uds = sc.nextInt();
 						almacen01.sumaPantalones(uds);
-						System.out.println("Has añadido " + uds + " pantalones");
+						System.out.println("Has aÃ±adido " + uds + " pantalones");
 						System.out.println("Ahora el almacen tiene" + almacen01.damePantalones() + " pantalones");
 						salir = 1;
 						break;
 
 					case 6://este case trabaja con el metodo setter con el que se restan pantalones
-						System.out.println("¿Cuantos pantalones de los que ha vendido desea añadir al stock");
+						System.out.println("Â¿Cuantos pantalones de los que ha vendido desea aÃ±adir al stock");
 						uds = sc.nextInt();
 						almacen01.restaPantalones(uds);
 						System.out.println("Has vendido " + uds + " pantalones");
@@ -110,10 +111,10 @@ public class AppAlmacenGit {
 						break;
 					}
 				} catch (ArithmeticException e) {
-					System.out.println("El 0 es un valor inválido en este campo");
+					System.out.println("El 0 es un valor invÃ¡lido en este campo");
 					System.out.println("El error es " + e.getMessage());
 				} catch (InputMismatchException e) {
-					System.out.println("Tipo de caracter inválido");
+					System.out.println("Tipo de caracter invÃ¡lido");
 					System.out.println("El error es " + e.getMessage());
 				}
 				/*con esos catches se recogen tanto las excepciones aritmeticas como las de input incompatible*/
