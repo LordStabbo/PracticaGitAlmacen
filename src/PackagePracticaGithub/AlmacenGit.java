@@ -5,7 +5,7 @@ public class AlmacenGit {
 	private int pantalones;
 
 	// constructor
-	public almacen(int camisas, int pantalones) {
+	public AlmacenGit(int camisas, int pantalones) {
 		this.camisas = camisas;
 		this.pantalones = pantalones;
 	}

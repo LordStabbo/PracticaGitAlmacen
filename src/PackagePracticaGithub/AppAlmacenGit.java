@@ -1,10 +1,13 @@
 package PackagePracticaGithub;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class AppAlmacenGit {
 	public static void main (String[] args) {
 		int opcion;//esta variable servira para elegir las opciones del switch
 		int uds;//con esta variable podré operar con las unidades en el stock
-		almacen almacen01 = new almacen(101, 100);
+		AlmacenGit almacen01 = new AlmacenGit(101, 100);
 		int salir = 0;//esta variable se utilizara para salir del do...while del try...catch
 		int salirProg = 0;/*esta variable la utilizara el do...while con el que es posible
 		implementar la opcion "salir"*/
