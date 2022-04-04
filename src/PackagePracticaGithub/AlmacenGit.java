@@ -27,6 +27,11 @@ public class AlmacenGit {
 	public void restaPantalones(int pantalones) {
 		this.pantalones -= pantalones;
 	}
+	
+	//metodo creado en segundo branch de Github
+	public void multiplicaPantalones(int pantalones) {
+		this.pantalones *= pantalones;
+	}
 
 	
 	//getters
