@@ -43,4 +43,8 @@ public class AlmacenGit {
 		return camisas;
 
 	}
+	
+
+//Comentario para hacer ejercicio7
+
 }
